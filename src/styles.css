@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.orientation {
+  display: inline-block;
+  text-align: center;
+  border: gray;
+  background-color: #e8562a;
+  color: #fff;
+}
+
+.label {
+  padding-left: 30px;
+  border-style: groove;
+  border-width: 7px;
+  border-color: coral;
+  width: 300px;
+}
+
+.menu {
+  padding-left: 30px;
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(148, 43, 5);
+  width: 130px;
+}
+
+button:hover {
+  background-color: coral;
+}
