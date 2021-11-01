@@ -1,6 +1,6 @@
 import "./styles.css";
-
-import Game from "./game.js";
+import "semantic-ui-css/semantic.min.css";
+import Game from "./Game.js";
 
 export default function App() {
   return (

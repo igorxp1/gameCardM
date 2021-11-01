@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles.css";
+import { Button } from "semantic-ui-react";
 
 export default function Game() {
   const [valor1, setValor1] = useState("");
@@ -66,29 +67,30 @@ export default function Game() {
 
   return (
     <div>
+    <center>
       <div className="menu">
         <div>
-          <button onClick={counter}>Comecar jogo</button>
+          <Button color="green" onClick={counter}>Comecar jogo</Button>
         </div>
-        <br></br>
+        <br></br> 
 
         {data.map((data) => (
           <div key={data.id} className="orientation">
             {isDisable ? (
-              <button
+              <Button color="green"
                 disabled
                 onClick={() => verifica(data.id, data.content)}
                 value={data.id}
               >
                 {isVisible ? data.content : data.id}
-              </button>
+              </Button>
             ) : (
-              <button
+              <Button  color="green" inverted
                 onClick={() => verifica(data.id, data.content)}
                 value={data.id}
               >
                 {isVisible ? data.content : data.id}
-              </button>
+              </Button>
             )}
           </div>
         ))}
@@ -97,11 +99,11 @@ export default function Game() {
         <div>
           <br></br>
           {!isDisable ? (
-            <button disabled onClick={verificaCerto}>
+            <Button color="green" disabled onClick={verificaCerto}>
               Ver se acertou
-            </button>
+            </Button>
           ) : (
-            <button onClick={verificaCerto}>Ver se acertou</button>
+            <Button color="green" onClick={verificaCerto}>Ver se acertou</Button>
           )}
         </div>
       </div>
@@ -114,7 +116,7 @@ export default function Game() {
       <br></br>
       <div className="label">
         <h2>{resultado}</h2>
-      </div>
+      </div></center>
     </div>
   );
 }
